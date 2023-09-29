@@ -320,6 +320,44 @@ img {
     color: #929191;
     margin-bottom: 10px;
 }
+.part4_imgs_left_text-hidden{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000049;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    color: #fff;
+    gap: 30px;
+    font-size: 20px;
+    display: none;
+}
+.part4_imgs_left_text-hidden1{
+
+    font-size: 14px;
+}
+.part4_imgs_left_text-hidden h2{
+    padding: 4px;
+    background-color: #00b0f4;
+    width: fit-content;
+    border-radius: 5px  ;
+}
+.part4_imgs_left_text-hidden span{
+    border-top: solid 1px #000;
+    width: 100%;
+    height: fit-content;
+    padding: 15px 0;
+}
+.part4_imgs_left_text-hidden span{
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s;
+}
+.part4_imgs_left_text-hidden:hover span{
+    gap: 20px;
+    transition: all 0.3s;
+}
 .part1_buttons {
     display: flex;
     gap: 20px;
@@ -649,6 +687,9 @@ img {
     top: -10px;
     height: 40px;
 }
+.part1_middle{
+    position: relative;
+}
 .part3_left {
     display: flex;
     flex-direction: column;
@@ -852,7 +893,7 @@ img {
     align-items: center;
     overflow: hidden;
 }
-.part4_hover div {
+.part4_hover .part4_imgs_left_text {
     width: 100%;
     height: 100%;
     background: #00000055;
@@ -864,6 +905,28 @@ img {
     font-size: 30px;
     opacity: 0;
     transition: all 0.3s;
+}
+.part1_inputs{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 30px;
+    z-index: 100;
+    background-color: #0000002e;
+    display: flex;
+    justify-content: space-around;
+}
+.part1_input1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part1_input1 input{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 .part4_hover:hover div {
     opacity: 1;
@@ -1049,6 +1112,9 @@ img {
     opacity: 1;
     transition: all 0.3s;
 }
+.part1_inputs{
+    display: none;
+}
 .part3_img img {
     position: absolute;
     width: 100%;
@@ -1059,9 +1125,6 @@ img {
 .part3_img:hover img {
     transform: scale(1.1);
     transition: all 0.3s;
-}
-.part3_left_top_mobile {
-    display: none;
 }
 .part5_card {
     width: 100%;
@@ -1165,6 +1228,9 @@ img {
 .part6_header i {
     color: red;
 }
+.part1_right{
+    display: none;
+}
 .part6_cards {
     display: flex;
     flex-direction: row;
@@ -1190,6 +1256,9 @@ img {
     align-items: center;
     overflow: hidden;
     transition: all 0.3s;
+}
+.part1_right1{
+    display: flex;
 }
 .part6_card_img img {
     position: absolute;
@@ -1233,6 +1302,11 @@ img {
     flex-direction: column;
     gap: 40px;
     margin: auto;
+}
+.mobile_container{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
 }
 .part7_top {
     height: fit-content;
@@ -1289,6 +1363,7 @@ img {
         width: 100%;
         padding: 26px 40px;
     }
+    
     .part1 {
         width: 100%;
         padding: 0 40px;
@@ -1322,8 +1397,129 @@ img {
     }
 }
 @media screen and (max-width: 960px) {
-    .container {
-        display: block;
+    .part4_imgs_left_text-hidden{
+        display: flex;
+    }
+    .container_input2{
+        display: none;
+    }
+    .container_input1{
+        display: none;
+    }
+    .container_input3{
+        display: none;
+    }
+    .container2:has(#mobile_radio1:checked) ~.container_input1{
+        display: flex;
+    }
+    .container2:has(#mobile_radio2:checked) ~.container_input2{
+        display: flex;
+    }
+    .container2:has(#mobile_radio3:checked) ~.container_input3{
+        display: flex;
+    }
+    .container_input2{
+        flex-direction: column;
+    }
+    .part1_right{
+        display: none;
+    }
+    .part3_right_bottom{
+        background: #fff;
+    }
+    .container_input3 .part3_right_bottom_card{
+        height: fit-content;
+        background-color: #fff;
+    }
+    .container_input3 .part2_header{
+        margin-top: 30px;
+    }
+    .container_input3 .part2_slider{
+        margin-top: 30px;
+    }
+    .container_input3 .part3_right_bottom_card_right{
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .container_input3 .part3_right_bottom_card_icon{
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .container_input1{
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+    .other_day input{
+        top: 0;
+        z-index: 1000;
+    }
+    .part3_page1_class_pack{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+    }
+    .container_input2{
+        margin-top: 20px;
+    }
+    .header_right_hidden_input:has(#header_right:checked) ~ .container{
+        display: none;
+    }
+    .container_input1 .part3_page1_class{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        border-bottom: none;
+        padding: 10px 10px;
+    }
+    .container_input1 .part3_img{
+        width: 100%;
+    }
+    .container_input1 .part3_page_details .part3_page_details_text{
+        display: none;
+    }
+    .container_input1 .part3_page_details{
+        gap: 20px;
+    }
+    .part1{
+        position: relative;
+    }
+    .part1_inputs{
+        display: flex;
+    }
+    .part1_inputs:has(#mobile_top1:checked) ~ .part1_middle .part1_right1{
+        display: flex;
+    }
+    .part1_inputs:has(#mobile_top1:checked) .part1_input11 {
+        background-color: #00b0f4;
+    }
+    .part1_inputs:has(#mobile_top2:checked) ~ .part1_middle .part1_right2{
+        display: flex;
+    }
+    .part1_inputs:has(#mobile_top2:checked) .part1_input12 {
+        background-color: #00b0f4;
+    }
+    .part1_inputs:has(#mobile_top3:checked) ~ .part1_middle .part1_right3{
+        display: flex;
+    }
+    .part1_inputs:has(#mobile_top3:checked) .part1_input13 {
+        background-color: #00b0f4;
+    }
+    .part1_inputs:has(#mobile_top4:checked) ~ .part1_middle .part1_right4{
+        display: flex;
+    }
+    .part1_inputs:has(#mobile_top4:checked) .part1_input14 {
+        background-color: #00b0f4;
+    }
+    .part3_page1_mobile{
+        width: 100%;
+        height: fit-content;
+    }
+    .part4_hover .part4_imgs_left_text {
+        display: none;
+    }
+    .part3_page1_mobile_hidden{
+        display: none;
     }
     .header {
         width: 100%;
@@ -1338,6 +1534,7 @@ img {
     .header_right_hidden {
         display: flex;
     }
+
     .part1_img {
         display: none;
         width: 100%;
@@ -1359,6 +1556,25 @@ img {
         position: absolute;
         right: -10px;
         font-size: 30px;
+    }
+    .header_right_hidden_input{
+        width: 65px;
+        height: 65px;
+        z-index: 100;
+        right: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header_right_hidden_input input{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    .header_right{
+        width: 100%;
+        height: 100%;
     }
     .part1_buttom {
         display: none;
@@ -1404,6 +1620,8 @@ img {
     }
     .part3_left_top_mobile {
         display: flex;
+        position: relative;
+        bottom: 0;
     }
     .part3_left_top_mobile {
         display: flex;
@@ -1436,7 +1654,7 @@ img {
     .part3_left_top_mobile {
         position: absolute;
         width: 100%;
-        top: -10px;
+        bottom: -15px;
     }
     .day {
         padding: 10px 0;
@@ -1480,7 +1698,7 @@ img {
         gap: 10px;
 
     }
-    .part3_page1_class {
+    .container_input2 .part3_page1_class {
         border-bottom: dotted #000 1px;
     }
     .part1_p {
@@ -1497,6 +1715,9 @@ img {
 @media screen and (max-width: 640px) {
     .card2 {
         display: none;
+    }
+    .container2{
+        padding: 0 15px;
     }
     .part3_page_details {
         font-size: 14px;
@@ -1551,9 +1772,26 @@ img {
     align-items: flex-start;
   }
 }
+@media screen and (max-width:500px){
+    .inner_part4{
+        padding: 0 15px;
+    }
+    .container2{
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width:475px){
+    .header_right ul li{
+display: none;
+    }
+    
+}
 @media screen and (max-width:408px){
   .part5_card_icons p{
     display: flex;
     flex-direction: row;
   }
+  .container2{
+    padding: 0 15px;
+}
 }
