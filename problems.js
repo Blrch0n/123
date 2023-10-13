@@ -15,6 +15,15 @@ let mas2 = [
     7,
     9
 ];
+let mas3 = [
+    3,
+    4,
+    5,
+    7,
+    8,
+    2,
+    3
+];
 let a = 2,
     b = 4;
 let name = "helo";
@@ -73,8 +82,8 @@ console.log("5.)", reverseWord(name));
 // 6
 function checkString(string1) {
     for (let i = 0; i < string1.length; i++) {
-        for(let y = i + 1;y < string1.length; y++){
-            if ((string1[i] == string1[y])){
+        for (let y = i + 1; y < string1.length; y++) {
+            if ((string1[i] == string1[y])) {
                 return false;
             }
         }
@@ -94,22 +103,24 @@ function commonNumber(mas1, mas2) {
 }
 console.log("7.)", commonNumber(mas, mas2));
 // 8
+console.log("8.)")
 function pyramid(number1) {
-    let space = '';
-    let length = number1;
-    for (let i = 1; i <= number1; i++) {
-        for (let y = 0; y < length; y++) {
-            space += ' ';
-            length --;
+    let n = number1;
+    let string = "";
+    // External loop
+    for (let i = 1; i <= n; i++) { // printing spaces
+        for (let j = 1; j <= n - i; j++) {
+            string += " ";
         }
-        for (let j = 0; j < i; j++) {
-            space += "*";
+        // printing star
+        for (let k = 0; k < 2 * i - 1; k++) {
+            string += "*";
         }
-        space += '\n';
+        string += "\n";
     }
-    console.log(space);
+    console.log(string);
 }
-pyramid(6);
+pyramid(5)
 // 9
 function factorial(number1) {
     let ans = 1;
@@ -118,15 +129,16 @@ function factorial(number1) {
     }
     return ans;
 }
-console.log(factorial(3));
+console.log("9.)", factorial(3));
 // 10
 function evenNumber(number2) {
     let numbers = '';
     for (let i = 1; i <= number2; i++) {
         if (i % 2 == 0) {
-            console.log(i);
+            numbers += i + " ";
         }
     }
+    console.log("10.)", numbers);
 }
 evenNumber(5);
 // 11
@@ -145,7 +157,7 @@ function isPalindrome(x) {
         return false;
     }
 };
-console.log(isPalindrome(1221));
+console.log("11.)", isPalindrome(1221));
 // 12
 function PrimeNumber(number1) {
     let times = 0;
@@ -165,7 +177,7 @@ console.log("12.)", PrimeNumber(3));
 function EveryPrimeNumber(number1) {
     let times = 0;
     let print = [];
-    let array = "";
+    let array = '';
     for (let j = 1; j <= number1; j++) {
         for (let i = 1; i <= j; i++) {
             if (j % i == 0) {
@@ -173,21 +185,32 @@ function EveryPrimeNumber(number1) {
             }
         }
         if (times == 2) {
-            console.log(j);
-        }times = 0;
+            array += j + " ";
+        }
+        times = 0;
     }
+    console.log("13.)", array);
 }
-console.log("13.)");
 EveryPrimeNumber(100);
 // 14
-function fibonacci(number1){
-    let mas=[];
-    mas[0]=1;
-    for(let i=1;i<number1;i++){
-        
+function fibonacci(number1) {
+    let mas = [];
+    let array = "";
+    for (let y = 0; y < number1; y++) {
+        mas[y] = 1;
     }
-    for(let i=0;i<number1;i++){
-        console.log(mas[i]);
+    for (let i = 2; i < number1; i++) {
+        mas[i] = mas[i - 1] + mas[i - 2];
     }
+    for (let j = 0; j < number1; j++) {
+        array += mas[j] + " ";
+    }
+    console.log("14.)", array);
 }
 fibonacci(12);
+// 15
+function sliceArray(mas) {
+    // for (let i = 0;) 
+    
+}
+sliceArray();
